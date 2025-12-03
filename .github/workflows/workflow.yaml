@@ -23,6 +23,6 @@ jobs:
           context: .
           push: true
           # A tag da imagem será seu-usuario/nome-do-repo:latest
-          tags: irvinglemuel/ascii-spinning-donut:latest
+          tags: carlosevan/ascii-spinning-donut:latest
           cache-from: type=registry,ref=carlosevan/ascii-spinning-donut:latest
           cache-to: type=inline
