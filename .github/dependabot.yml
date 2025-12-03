@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Configuração para dependências Python/PIP
+  - package-ecosystem: "pip"             
+    directory: "/"                        
+    schedule:
+      interval: "weekly"                  
+    target-branch: "main"                
+    labels:                              
+      - "dependencies"
+      - "python"
+    commit-message:
+      prefix: "chore"                    
+      include: "scope"
