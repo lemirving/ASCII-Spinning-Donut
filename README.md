@@ -26,3 +26,17 @@ A imagem mais recente foi enviada pelo nosso Pipeline de CI/CD para o Docker Hub
 
 ```bash
 docker pull carlosevan/ascii-spinning-donut:latest
+
+```
+### 2. Para rodar pelo WSL, basta acessar o linux pelo terminal Powershell e executar o seguinte comando:
+
+```Powershell
+docker run -it --rm \
+    --net=host \
+    -e DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
+    -v /run/user/$(id -u)/pulse/native:/run/user/$(id -u)/pulse/native \
+    carlosevan/ascii-spinning-donut:latest
+
+```
