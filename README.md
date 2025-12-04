@@ -40,3 +40,17 @@ docker run -it --rm \
     carlosevan/ascii-spinning-donut:latest
 
 ```
+### 3. Para rodar pelo Linux, basta acessar o terminal e executar o seguinte comando:
+
+```Terminal Linux
+docker run -it --rm \
+    --net=host \
+    -e DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v /dev/dri:/dev/dri \
+    -e PULSE_SERVER=unix:/run/user/$(id -u)/pulse/native \
+    -v /run/user/$(id -u)/pulse/native:/run/user/$(id -u)/pulse/native \
+    carlosevan/ascii-spinning-donut:latest
+
+```
+
