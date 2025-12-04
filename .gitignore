@@ -1,6 +1,4 @@
-# Pasta do Ambiente Virtual
 venv/
 
-# Arquivos de bytecode e caches do Python
 __pycache__/
 *.pyc

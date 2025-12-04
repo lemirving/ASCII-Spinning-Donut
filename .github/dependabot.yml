@@ -1,6 +1,5 @@
 version: 2
 updates:
-  # Configuração para dependências Python/PIP
   - package-ecosystem: "pip"             
     directory: "/"                        
     schedule:
